@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="no-js">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clima Consciente | Sustentabilidade Inteligente</title>
+  <meta name="description" content="Plataforma avançada de monitoramento e conscientização climática">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/modernizr.js"></script>
+</head>
+
+<body>
+  <!-- Preloader -->
+  <div class="preloader">
+    <div class="preloader-spinner">
+      <div class="spinner-border"></div>
+    </div>
+  </div>
+
+  <!-- Cursor Personalizado -->
+  <div class="cursor cursor--small"></div>
+  <div class="cursor cursor--large"></div>
+
+  <!-- Header Elegante -->
+  <header class="header">
+    <div class="header-container">
+      <a href="#home" class="logo">
+        <i class="fas fa-leaf"></i>
+        <span>Clima<span class="logo-highlight">Consciente</span></span>
+      </a>
+
+      <nav class="main-nav">
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-link active"><span>Home</span></a></li>
+          <li><a href="#simulacoes" class="nav-link"><span>Simulações</span></a></li>
+          <li><a href="#calculadora" class="nav-link"><span>Calculadora</span></a></li>
+          <li><a href="#monitoramento" class="nav-link"><span>Monitoramento</span></a></li>
+          <li><a href="#noticias" class="nav-link"><span>Notícias</span></a></li>
+          <li><a href="#forum" class="nav-link"><span>Fórum</span></a></li>
+        </ul>
+
+        <div class="nav-cta">
+          <a href="#calculadora" class="btn btn-outline">Calcular Pegada</a>
+        </div>
+      </nav>
+
+      <button class="hamburger">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section Premium -->
+  <section id="home" class="hero-section">
+    <div class="hero-particles" id="particles-js"></div>
+    <div class="hero-content">
+      <div class="container">
+        <h1 class="hero-title">
+          <span class="title-line">Inteligência Ambiental</span>
+          <span class="title-line">para um Futuro</span>
+          <span class="title-line highlight">Sustentável</span>
+        </h1>
+
+        <p class="hero-subtitle">Tecnologia avançada de monitoramento climático e análise preditiva</p>
+
+        <div class="hero-cta">
+          <a href="#simulacoes" class="btn btn-primary">
+            <span>Explorar Plataforma</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="#video-tour" class="btn-play">
+            <i class="fas fa-play"></i>
+            <span>Assista o Tour</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll">
+      <span>Scroll Down</span>
+      <div class="scroll-line"></div>
+    </div>
+
+    <div class="hero-image">
+      <div class="image-container">
+        <img src="assets/images/earth-globe.svg" Visualização 3D do planeta Terra" class="parallax-layer" data-depth="0.2">
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção de Simulações Sofisticada -->
+  <section id="simulacoes" class="section section-simulations">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Análise Preditiva</span>
+        <h2 class="section-title">Simulações <span>Climáticas</span></h2>
+        <p class="section-description">Explore cenários futuros baseados em dados científicos</p>
+      </div>
+
+      <div class="simulation-grid">
+        <div class="simulation-controls">
+          <div class="control-group">
+            <label class="control-label">
+              <span>Desmatamento</span>
+              <output id="desmatamento-value">0</output>%
+            </label>
+            <input type="range" id="desmatamento-range" min="0" max="100" value="0" class="styled-slider">
+          </div>
+
+          <div class="control-group">
+            <label class="control-label">
+              <span>Emissões CO₂</span>
+              <output id="co2-value">0</output> ppm
+            </label>
+            <input type="range" id="co2-range" min="350" max="1000" value="415" class="styled-slider">
+          </div>
+
+          <div class="simulation-info">
+            <div class="info-card">
+              <i class="fas fa-info-circle"></i>
+              <p>Altere os parâmetros para ver projeções em tempo real</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="simulation-visualization">
+          <div class="chart-container">
+            <canvas id="grafico-clima"></canvas>
+          </div>
+
+          <div class="simulation-legend">
+            <div class="legend-item">
+              <span class="legend-color" style="background: #2E7D32;"></span>
+              <span class="legend-label">Temperatura (°C)</span>
+            </div>
+            <div class="legend-item">
+              <span class="legend-color" style="background: #2196F3;"></span>
+              <span class="legend-label">Nível do Mar (m)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rodapé Premium -->
+  <footer class="footer">
+    <div class="footer-main">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col footer-about">
+            <div class="footer-logo">
+              <i class="fas fa-leaf"></i>
+              <span>ClimaConsciente</span>
+            </div>
+            <p>Tecnologia e sustentabilidade trabalhando juntas para um futuro melhor.</p>
+            <div class="footer-social">
+              <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-col footer-links">
+            <h3 class="footer-title">Explorar</h3>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#simulacoes">Simulações</a></li>
+              <li><a href="#calculadora">Calculadora</a></li>
+              <li><a href="#monitoramento">Monitoramento</a></li>
+              <li><a href="#noticias">Notícias</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col footer-contact">
+            <h3 class="footer-title">Contato</h3>
+            <ul>
+              <li><i class="fas fa-envelope"></i> contato@climaconsciente.com</li>
+              <li><i class="fas fa-phone"></i> (85) 98765-4321</li>
+              <li><i class="fas fa-map-marker-alt"></i> Fortaleza, CE - Brasil</li>
+            </ul>
+          </div>
+
+          <div class="footer-col footer-newsletter">
+            <h3 class="footer-title">Newsletter</h3>
+            <p>Assine para receber atualizações</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Seu melhor email" required>
+              <button type="submit"><i class="fas fa-paper-plane"></i></button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2025 Clima Consciente. Todos os direitos reservados.</p>
+        <div class="footer-legal">
+          <a href="#">Termos de Uso</a>
+          <a href="#">Política de Privacidade</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-backtotop">
+      <a href="#home" class="backtotop-btn">
+        <i class="fas fa-arrow-up"></i>
+      </a>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/libs/particles.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
